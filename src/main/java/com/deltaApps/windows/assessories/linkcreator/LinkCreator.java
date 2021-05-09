@@ -6,13 +6,18 @@ import java.io.InputStreamReader;
 
 public class LinkCreator {
     private String commandLine = "cmd /c ";
+
+    public LinkCreator(String link ,String linkFolderName, char param , String target){
+        this("mklink \"" + link + "\\" + linkFolderName + "\" /" + param + " \"" + target +"\"");
+    }
+
     public LinkCreator(String CMD){
         try {
             commandLine += CMD;
             Process process = Runtime.getRuntime().exec(commandLine);
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-
+            
             String s;
             System.out.println("Standard output: ");
             while ((s = stdInput.readLine()) != null) {
