@@ -5,10 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class LinkCreator {
-
+    private String commandLine = "cmd /c ";
     public LinkCreator(String CMD){
         try {
-            Process process = Runtime.getRuntime().exec("cmd /c dir");
+            commandLine += CMD;
+            Process process = Runtime.getRuntime().exec(commandLine);
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
 
