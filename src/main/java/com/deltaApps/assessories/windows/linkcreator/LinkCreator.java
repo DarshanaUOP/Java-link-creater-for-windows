@@ -1,4 +1,4 @@
-package com.deltaApps.windows.assessories.linkcreator;
+package com.deltaApps.assessories.windows.linkcreator;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class LinkCreator {
             Process process = Runtime.getRuntime().exec(commandLine);
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-            
+
             String s;
             System.out.println("Standard output: ");
             while ((s = stdInput.readLine()) != null) {
