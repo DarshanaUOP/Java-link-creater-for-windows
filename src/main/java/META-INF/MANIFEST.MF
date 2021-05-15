@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: CreateLinks
+Class-Path: JDeltaComponents-1.0.0.jar
+
