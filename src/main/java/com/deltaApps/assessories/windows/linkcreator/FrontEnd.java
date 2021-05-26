@@ -96,7 +96,7 @@ public class FrontEnd extends JFrame {
         targetPanel.add(targetLabel,BorderLayout.NORTH);
         targetPanel.add(targetOutLabel,BorderLayout.SOUTH);
 
-        createButton = new JButton("Proceed");
+        createButton = new JButton("Create");
         createButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
